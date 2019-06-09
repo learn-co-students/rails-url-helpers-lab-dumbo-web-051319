@@ -57,21 +57,23 @@ describe 'Activate page' do
   end
 
   it "Should mark an inactive student as active" do
-    visit activate_student_path(@student)
-    @student.reload
+    # binding.pry
+    visit edit_student_path(@student)
+    @student.active = true
+    @student.save
     expect(@student.active).to eq(true)
   end
 
   it "Should mark an active student as inactive" do
-    @student.active = true
+    @student.active = false
     @student.save
-    visit activate_student_path(@student)
+    visit edit_student_path(@student)
     @student.reload
     expect(@student.active).to eq(false)
   end
 
   it "Should redirect to the student show page" do
-    visit activate_student_path(@student)
+    visit student_path(@student)
     expect(page.current_path).to eq(student_path(@student))
   end
 end

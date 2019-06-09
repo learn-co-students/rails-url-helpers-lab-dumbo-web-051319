@@ -1,0 +1,13 @@
+<h1><%= @student.to_s %></h1>
+<%if @active %>
+<h2>This student is currently active.</h2>
+<% else %>
+<h2>This student is currently inactive.</h2>
+<% end %>
+<%= form_for @student do |f| %>
+  <select name="students[active]">
+    <option value="false">inactive</option>
+    <option value="true">active</option>
+  </select>
+  <%=  f.submit %>
+<% end %>

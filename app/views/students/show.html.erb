@@ -1,1 +1,9 @@
 <h1><%= @student.to_s %></h1>
+<%if @active %>
+<h2>This student is currently active.</h2>
+<% else %>
+<h2>This student is currently inactive.</h2>
+<% end %>
+
+<a href="/students"><button type="button" name="button">Back</button></a>
+<a href="/students/<%= @student.id %>/edit"><button type="button" name="button">Edit</button></a>
