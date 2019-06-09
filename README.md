@@ -14,9 +14,9 @@
 
 In this lab you will be building out the Student management dashboard for the Flatiron School by starting to integrate the ability to link between pages. Four tests are currently passing, and the rest need implementation code to start passing. In order to complete this lab, you will need to complete the following tasks:
 
-- A user should be able to navigate to `/students` to view all of the students.
+<!-- - A user should be able to navigate to `/students` to view all of the students. -->
 
-- A user should be able to click the student's name on the `index` page and be taken to that specific student's `show` page.
+<!-- - A user should be able to click the student's name on the `index` page and be taken to that specific student's `show` page. -->
 
 - Create a new boolean attribute called `active` in the students table. (HINT: You might have to search around for the best way to set a (_ahem_) **default value** (should default to false).)
 
@@ -30,7 +30,7 @@ In this lab you will be building out the Student management dashboard for the Fl
 
 - Call the Student class instance method `to_s` on each of the students on the index page so that each student element contains their first and last name.
 
-- On the student index page, test out all three different `link_to` argument options, e.g.: `link_to "post", "/post/#{post.id}"`, `link_to("post", post_path(post.id))`, `link_to("post", post_path(post))`.
+<!-- - On the student index page, test out all three different `link_to` argument options, e.g.: `link_to "post", "/post/#{post.id}"`, `link_to("post", post_path(post.id))`, `link_to("post", post_path(post))`. -->
 
 ## Resources
 
