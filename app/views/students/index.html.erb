@@ -1,5 +1,8 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div>
+      <!--shows Multiple students on the index page and index page links to post page------liking to student name and leading it student it-->
+      <div><%= link_to student.to_s, student_path(student) %></div>
+      </div>
   <% end %>
 </div>
