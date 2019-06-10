@@ -1,1 +1,19 @@
+<marquee>🎓🎓🎓🎓</marquee>
 <h1><%= @student.to_s %></h1>
+<% if @student.active == false %>
+  <h2>Active Status: This student is currently inactive.</h2>
+<% else %>
+  <h2>Active Status: This student is currently active.</h2>
+<% end %>
+
+<!-- <form action="/students" method="POST">
+  <input type="hidden" name="_Method" value="PATCH">
+    <input type="submit" value="activate">
+</form> -->
+<!-- <a href="/students/<%= @student.id%>/activate ">
+  <input type="submit" value="change active status">
+</a> -->
+
+<a href="<%= activate_student_path(@student)%>">
+  <input type="submit" value="change status">
+</a>
