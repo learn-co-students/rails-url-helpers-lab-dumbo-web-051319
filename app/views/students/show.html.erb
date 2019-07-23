@@ -1,1 +1,10 @@
-<h1><%= @student.to_s %></h1>
+<label> Welcome Student </label> <br>
+
+
+<h1> <%=@student.first_name %> </h1> <div>
+<h1> <%=@student.last_name %> </h1> </div>
+<% if @student.active == true %>
+This student is currently active.
+<% else %>
+This student is currently inactive.
+<% end %>
